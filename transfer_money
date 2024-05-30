@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Куда вы хотите полететь?");
+        String country = sc.nextLine();
+        double RUB;
+        double Dollars;
+        if (country.equals("Swetland") || country.equals("Швеция"))
+        {
+            System.out.println("Введите сколько у вас Евро?");
+            double euro = sc.nextDouble();
+            double euroCrons = 11.61;
+            double crons = euroCrons * euro;
+            System.out.println("У вас будет " + crons + " Крон");
+
+        }
+        else if(country.equals("China") || country.equals("Китай"))
+        {
+            System.out.println("Введите сколько у вас Йен?");
+            double ien = sc.nextDouble();
+            double ienUani = 0.046;
+            double Uani = ienUani * ien;
+            System.out.println("У вас будет " + Uani + " Юаней");
+        }
+        else {
+            System.out.println("Неверно введено название страны!");
+        }
+    }
+}
